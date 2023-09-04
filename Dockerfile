@@ -25,9 +25,9 @@ COPY --from=builder /app/.next/standalone ./app
 COPY --from=builder /app/.next/static ./app/.next/static
 
 # Link package to github repo
-ARG user
+
 ARG repo
-LABEL org.opencontainers.image.source https://github.com/${user}/${repo}
+LABEL org.opencontainers.image.source https://github.com/${repo}
 
 # Expose port 3000
 EXPOSE 3000
